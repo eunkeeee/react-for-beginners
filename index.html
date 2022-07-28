@@ -9,8 +9,8 @@
   <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-    function Btn({ text, fontSize = 16 }) {
-      console.log(text, "was rendered");
+    function Btn(props) {
+      console.log(props.text, "was rendered");
       return (
         <button
           style={{
@@ -19,10 +19,10 @@
             padding: "10px 20px",
             borderRadius: 10,
             border: 0,
-            fontSize: fontSize,
+            fontSize: props.fontSize,
           }}
         >
-          {text}
+          {props.text}
         </button>
       );
     }
